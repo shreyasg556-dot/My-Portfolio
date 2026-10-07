@@ -1,0 +1,2422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Shreyas H N - Software Engineer specializing in Data Science, C, Java, Python, and Full-Stack Development." />
+  <title>Shreyas H N | Software Engineer Portfolio</title>
+
+  <!-- Google Fonts: Pixel Fonts (Press Start 2P, Silkscreen) & Modern Typography (Plus Jakarta Sans, JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========================================================
+       RESPONSIVE MOBILE TOPBAR
+       Visible on tablet/mobile screens (<= 1024px) for branding,
+       quick night mode toggle, and the mobile menu trigger.
+  ======================================================== -->
+  <header class="mobile-topbar" id="mobile-topbar">
+    <div class="mobile-brand-box">
+      <a href="#hero" class="mobile-brand pixel-font" aria-label="Shreyas.dev Homepage">
+        &lt;Shreyas<span class="brand-accent">.dev</span>/&gt;
+      </a>
+      <span class="mobile-status-led" title="Player Online"></span>
+    </div>
+
+    <div class="mobile-top-actions">
+      <!-- Night Mode Toggle Button (Mobile Topbar) -->
+      <button id="theme-toggle" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle Night/Light Mode"
+        title="Toggle Night/Light Mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Menu Trigger -->
+      <button id="mobile-menu-toggle" class="mobile-menu-btn pixel-btn" aria-controls="sidebar" aria-expanded="false"
+        aria-label="Toggle Navigation Menu">
+        <span class="pixel-btn-icon">&#9776;</span>
+        <span class="pixel-font" style="font-size: 0.65rem;">MENU</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- ========================================================
+       VERTICAL NAVIGATION BAR (LEFT SIDE OF SCREEN)
+       Styled with an authentic pixel art aesthetic:
+       - Placed on the left side of the screen
+       - Links for Home, About Me, Skills, Timeline, Projects,
+         Testimonials, Chat, and Contact
+       - 8-bit selection arrows (▶), pixel borders & status indicator
+       - Fully responsive and accessible
+  ======================================================== -->
+  <aside class="pixel-sidebar" id="sidebar" aria-label="Main Navigation">
+    <!-- Sidebar Top: Profile & Branding -->
+    <div class="sidebar-header">
+      <div class="sidebar-brand-card">
+        <div class="sidebar-avatar-wrap">
+          <img src="profile.jpg" alt="Shreyas H N - Pixel Avatar" class="sidebar-avatar-img" />
+          <span class="sidebar-avatar-beacon" title="Player Online"></span>
+        </div>
+        <div class="sidebar-brand-details">
+          <a href="#hero" class="sidebar-brand-link pixel-font">SHREYAS<span class="dot-accent">.DEV</span></a>
+          <span class="sidebar-role-badge pixel-font-sub">LVL 01 &bull; SOFTWARE ENG</span>
+        </div>
+      </div>
+
+      <!-- Close button on mobile -->
+      <button id="sidebar-close-btn" class="sidebar-close-btn pixel-btn"
+        aria-label="Close Navigation Menu">&times;</button>
+    </div>
+
+    <!-- Sidebar Quest Navigation Menu -->
+    <nav class="sidebar-nav-container">
+      <div class="sidebar-menu-heading pixel-font">
+        <span>QUEST LOG</span>
+        <span class="heading-dots">&bull;&bull;&bull;</span>
+      </div>
+
+      <ul class="sidebar-menu-list" id="sidebar-menu" role="menu">
+        <li role="none">
+          <a href="#hero" class="sidebar-nav-link active" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">🏰</span>
+            <span class="nav-item-label pixel-font">Home</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#about" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">👤</span>
+            <span class="nav-item-label pixel-font">About Me</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#highlight" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">🎬</span>
+            <span class="nav-item-label pixel-font">Highlight</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#skills" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">⚡</span>
+            <span class="nav-item-label pixel-font">Skills</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#timeline" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">⏳</span>
+            <span class="nav-item-label pixel-font">Timeline</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#projects" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">📁</span>
+            <span class="nav-item-label pixel-font">Projects</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#testimonials" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">⭐</span>
+            <span class="nav-item-label pixel-font">Testimonials</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#chat" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">💬</span>
+            <span class="nav-item-label pixel-font">Chat</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#contact" class="sidebar-nav-link" role="menuitem">
+            <span class="pixel-arrow" aria-hidden="true">&#9654;</span>
+            <span class="nav-item-icon" aria-hidden="true">✉️</span>
+            <span class="nav-item-label pixel-font">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Bottom: Theme Toggle & System Status -->
+    <div class="sidebar-footer">
+      <button id="sidebar-theme-toggle" class="sidebar-theme-btn pixel-btn" aria-label="Toggle Night/Day Mode">
+        <span class="sun-icon icon-text" aria-hidden="true">☀️ DAY MODE</span>
+        <span class="moon-icon icon-text" aria-hidden="true">🌙 NIGHT MODE</span>
+      </button>
+
+      <div class="sidebar-status-footer">
+        <div class="status-indicator-box">
+          <span class="status-dot green"></span>
+          <span class="status-text pixel-font-sub">STATUS: ONLINE</span>
+        </div>
+        <span class="status-version pixel-font-sub">V1.0</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       MAIN CONTENT CONTAINER
+       Encapsulates all primary portfolio sections.
+  ======================================================== -->
+  <main id="main-content">
+
+    <!-- ========================================================
+         HERO SECTION
+         Introduction, dynamic roles, quick elevator pitch,
+         call-to-action buttons, and portrait/graphic card.
+    ======================================================== -->
+    <!-- ========================================================
+         HERO SECTION (PIXEL ART STYLE)
+         Retro 8-bit arcade aesthetic featuring:
+         - Provided background image with CRT scanlines & pixel dither
+         - Welcoming title & brief engineering tagline
+         - Night mode toggle detected via CSS media queries
+         - 8-bit dialogue window, action buttons, & RPG character HUD
+    ======================================================== -->
+    <section class="hero-section pixel-hero" id="hero">
+      <!-- CRT scanline and retro pixel grid overlays -->
+      <div class="hero-scanlines" aria-hidden="true"></div>
+      <div class="hero-pixel-grid" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Left Column: Welcome Dialogue, Tagline, Controls, & Buttons -->
+        <div class="hero-content pixel-content">
+          <!-- Pixel Status Tag -->
+          <div class="pixel-badge-banner">
+            <span class="pixel-blink-dot" aria-hidden="true"></span>
+            <span class="pixel-badge-text">STATUS: PLAYER 1 ONLINE &bull; READY FOR QUESTS</span>
+          </div>
+
+          <!-- Welcoming Title -->
+          <h1 class="hero-pixel-welcome pixel-font">WELCOME, VISITOR!</h1>
+
+          <!-- Name Headline with Retro Glow -->
+          <h2 class="hero-pixel-name pixel-font">
+            I'M <span class="pixel-name-glow">SHREYAS H N</span>
+          </h2>
+
+          <!-- Brief Tagline -->
+          <p class="hero-pixel-tagline">
+            <span class="pixel-prompt">&gt;</span> Software Engineer &amp; Data Science Craftsman &bull; Leveling up
+            code, systems, and algorithms.<span class="pixel-cursor" aria-hidden="true">_</span>
+          </p>
+
+          <!-- Retro 8-Bit Dialogue Box -->
+          <div class="pixel-dialogue-box">
+            <div class="dialogue-header">
+              <span class="dialogue-speaker">NPC // SHREYAS:</span>
+              <span class="dialogue-sound-icon">🔊 8-BIT</span>
+            </div>
+            <p class="dialogue-message">
+              "Crafting high-efficiency software from low-level C logic to modern data-driven full-stack apps. Choose
+              your action to begin the quest!"
+            </p>
+          </div>
+
+          <!-- Night Mode Toggle Widget (Hero Integrated & CSS Media Query Synced) -->
+          <div class="pixel-theme-widget">
+            <div class="pixel-theme-label">
+              <span class="pixel-label-icon">⚙️</span>
+              <span>DISPLAY MODE:</span>
+            </div>
+            <button id="hero-pixel-theme-toggle" class="pixel-btn-toggle" aria-label="Toggle Night/Day Mode"
+              title="Toggle Night/Day Mode">
+              <span class="toggle-mode-icon icon-day">☀️ DAY</span>
+              <span class="toggle-slot">
+                <span class="toggle-knob"></span>
+              </span>
+              <span class="toggle-mode-icon icon-night">🌙 NIGHT</span>
+            </button>
+            <span class="pixel-mq-tag"
+              title="Auto-detects OS/Browser dark mode via CSS @media (prefers-color-scheme)">[AUTO: CSS MEDIA
+              QUERY]</span>
+          </div>
+
+          <!-- 8-Bit Pixel Action Buttons -->
+          <div class="hero-pixel-actions">
+            <a href="#projects" class="pixel-btn pixel-btn-primary">
+              <span class="btn-arrow">&#9654;</span> VIEW PROJECTS
+            </a>
+            <a href="Shreyas.resume.pdf" target="_blank" class="pixel-btn pixel-btn-secondary">
+              <span class="btn-icon">&#128220;</span> DOWNLOAD CV
+            </a>
+            <a href="#contact" class="pixel-btn pixel-btn-accent">
+              <span class="btn-icon">&#128172;</span> CONTACT ME
+            </a>
+          </div>
+
+          <!-- Retro Social Links Bar -->
+          <div class="hero-pixel-socials">
+            <span class="socials-label">PROFILES:</span>
+            <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+              class="pixel-social-link" aria-label="GitHub Profile">
+              [GH] GITHUB
+            </a>
+            <a href="https://linkedin.com/in/shreyas-gowda-6ab006398" target="_blank" rel="noopener noreferrer"
+              class="pixel-social-link" aria-label="LinkedIn Profile">
+              [IN] LINKEDIN
+            </a>
+            <a href="mailto:shreyasg556@gmail.com" class="pixel-social-link" aria-label="Send Email">
+              [EM] EMAIL
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: RPG Character Sheet HUD Window -->
+        <div class="hero-visual">
+          <div class="pixel-hud-window">
+            <!-- HUD Titlebar -->
+            <div class="pixel-hud-titlebar">
+              <div class="titlebar-controls">
+                <span class="pixel-sq red"></span>
+                <span class="pixel-sq yellow"></span>
+                <span class="pixel-sq green"></span>
+              </div>
+              <span class="pixel-hud-title">CHARACTER SHEET: SHREYAS</span>
+              <span class="pixel-hud-lvl">LVL 01</span>
+            </div>
+
+            <!-- Avatar Frame with 8-bit Corner Brackets -->
+            <div class="pixel-avatar-frame-wrap">
+              <div class="pixel-avatar-frame">
+                <img src="profile.jpg" alt="Shreyas H N - Portrait" class="pixel-avatar-img" />
+                <span class="frame-corner c-tl"></span>
+                <span class="frame-corner c-tr"></span>
+                <span class="frame-corner c-bl"></span>
+                <span class="frame-corner c-br"></span>
+              </div>
+            </div>
+
+            <!-- RPG Character Attributes & Health/Mana Bars -->
+            <div class="pixel-hud-attributes">
+              <div class="hud-attribute-row">
+                <span class="attr-key">CLASS:</span>
+                <span class="attr-val">SOFTWARE ENGINEER</span>
+              </div>
+              <div class="hud-attribute-row">
+                <span class="attr-key">MAJOR:</span>
+                <span class="attr-val">CS &amp; DATA SCIENCE</span>
+              </div>
+              <div class="hud-attribute-row">
+                <span class="attr-key">GUILD:</span>
+                <span class="attr-val">AIT CHIKKAMAGALURU</span>
+              </div>
+
+              <!-- HP Bar (Data Structures & Algorithms) -->
+              <div class="pixel-meter-block">
+                <div class="meter-header">
+                  <span class="meter-name">HP (DSA &amp; CODE)</span>
+                  <span class="meter-val">100 / 100</span>
+                </div>
+                <div class="pixel-meter-track">
+                  <div class="pixel-meter-fill hp-bar"></div>
+                </div>
+              </div>
+
+              <!-- MP Bar (System Logic & Architecture) -->
+              <div class="pixel-meter-block">
+                <div class="meter-header">
+                  <span class="meter-name">MP (SYSTEM LOGIC)</span>
+                  <span class="meter-val">98 / 100</span>
+                </div>
+                <div class="pixel-meter-track">
+                  <div class="pixel-meter-fill mp-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8-Bit Inventory Skill Chips -->
+            <div class="pixel-hud-inventory">
+              <span class="inv-label">SKILL SLOTS:</span>
+              <div class="inv-chips">
+                <span class="pixel-chip">C</span>
+                <span class="pixel-chip">JAVA</span>
+                <span class="pixel-chip">PYTHON</span>
+                <span class="pixel-chip">NODE.JS</span>
+                <span class="pixel-chip">MYSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         ABOUT SECTION
+         Clean, minimalistic layout featuring:
+         - Pixel-art avatar portrait in a retro frame
+         - Short software engineer bio
+         - Career highlights and personal interests
+    ======================================================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">PLAYER PROFILE</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </header>
+
+        <div class="about-minimal-grid">
+          <!-- Left Column: Pixel Art Avatar Card -->
+          <div class="about-visual-col">
+            <div class="about-pixel-avatar-card pixel-box">
+              <div class="avatar-card-header">
+                <span class="avatar-header-led"></span>
+                <span class="avatar-header-title pixel-font">SPRITE: SHREYAS</span>
+                <span class="avatar-header-badge pixel-font-sub">16-BIT</span>
+              </div>
+
+              <div class="about-avatar-frame">
+                <img src="pixel-avatar.png" alt="Shreyas H N - Pixel Art Avatar" class="about-avatar-img" />
+                <span class="avatar-frame-corner c-tl"></span>
+                <span class="avatar-frame-corner c-tr"></span>
+                <span class="avatar-frame-corner c-bl"></span>
+                <span class="avatar-frame-corner c-br"></span>
+              </div>
+
+              <div class="about-avatar-meta">
+                <h3 class="about-avatar-name pixel-font">Shreyas H N</h3>
+                <span class="about-avatar-role pixel-font-sub">Software Engineer &bull; Data Science</span>
+
+                <div class="about-quick-specs">
+                  <div class="spec-row">
+                    <span class="spec-label">STATUS:</span>
+                    <span class="spec-val">OPEN TO ROLES</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">DEGREE:</span>
+                    <span class="spec-val">B.E. CS &amp; DATA SCI</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">BASE:</span>
+                    <span class="spec-val">KARNATAKA, INDIA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Short Bio, Career Highlights, & Personal Interests -->
+          <div class="about-info-col">
+            <!-- Short Bio Lead -->
+            <div class="about-bio-block">
+              <h3 class="about-headline">
+                Blending strong computer science foundations with a passion for pragmatic software engineering.
+              </h3>
+              <p class="about-paragraph">
+                I am an aspiring Software Engineer currently pursuing my Bachelor of Engineering in Computer Science and
+                Data Science at Adichunchanagiri Institute of Technology. Driven by a deep curiosity for how computers
+                execute instructions and manage data, I focus on building efficient, structured, and reliable software.
+              </p>
+              <p class="about-paragraph">
+                My technical toolkit spans systems programming in <strong>C</strong>, object-oriented software in
+                <strong>Java</strong>, scripted solutions in <strong>Python</strong>, and modern web application
+                development with <strong>JavaScript</strong> and <strong>Node.js</strong>.
+              </p>
+            </div>
+
+            <!-- Two Minimalist Sub-Cards: Career Highlights & Personal Interests -->
+            <div class="about-duo-cards">
+              <!-- Career Highlights Card -->
+              <div class="about-subcard pixel-subcard">
+                <div class="subcard-header">
+                  <span class="subcard-icon">🏆</span>
+                  <h4 class="subcard-title pixel-font">Career Highlights</h4>
+                </div>
+                <ul class="subcard-list">
+                  <li>
+                    <span class="bullet-arrow">&#9654;</span>
+                    <div>
+                      <strong>Adaptive Headlights System:</strong> Engineered a 30-day automotive prototype in C with
+                      ambient sensors to automatically dim and dip headlights on curved roads.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">&#9654;</span>
+                    <div>
+                      <strong>Strong Academic Foundation:</strong> Maintained academic excellence with 87% in
+                      Pre-University Science and an ongoing 7.0 CGPA in Computer Science &amp; Data Science.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">&#9654;</span>
+                    <div>
+                      <strong>Algorithmic Problem Solving:</strong> Active practice with core Data Structures &amp;
+                      Algorithms, relational database modeling, and OS memory management concepts.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Personal Interests Card -->
+              <div class="about-subcard pixel-subcard">
+                <div class="subcard-header">
+                  <span class="subcard-icon">🎮</span>
+                  <h4 class="subcard-title pixel-font">Personal Interests</h4>
+                </div>
+                <ul class="subcard-list">
+                  <li>
+                    <span class="bullet-arrow">&#9654;</span>
+                    <div>
+                      <strong>Retro Computing &amp; Pixel Art:</strong> Exploring 8-bit/16-bit graphical sprites, game
+                      loop architectures, and vintage computing paradigms.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">&#9654;</span>
+                    <div>
+                      <strong>Hardware &amp; IoT Tinkering:</strong> Experimenting with microcontrollers, ambient
+                      illumination sensors, and automated physical computing.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">&#9654;</span>
+                    <div>
+                      <strong>System Architecture &amp; Reading:</strong> Studying system performance trade-offs, clean
+                      architecture patterns, and emerging data science models.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         VIDEO SHOWCASE & PORTFOLIO HIGHLIGHT SECTION
+         Dedicated multimedia presentation featuring:
+         - Responsive 16:9 video container (aspect-ratio & padding fallback)
+         - Retro arcade CRT television frame with pixel corners & scanlines
+         - Custom retro playback HUD controls (Play/Pause, Mute, Fullscreen)
+         - Descriptive caption card detailing video's content and engineering topics
+    ======================================================== -->
+    <section class="video-showcase-section section-padding" id="highlight">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">BROADCAST TRANSMISSION</span>
+          <h2 class="section-title">Portfolio Highlight &amp; Introduction</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead pixel-font-sub">
+            [SYS_STREAM]: Video overview introducing engineering capabilities, core problem-solving methodologies, and
+            system demonstrations.
+          </p>
+        </header>
+
+        <!-- Main Video Showcase Container: Retro Arcade CRT Console Framing -->
+        <div class="video-showcase-wrapper">
+          <div class="pixel-crt-monitor pixel-hud-card">
+            <!-- CRT Monitor Header / Channel HUD -->
+            <div class="crt-header-bar">
+              <div class="crt-controls-leds">
+                <span class="pixel-sq red" title="RECORDING"></span>
+                <span class="pixel-sq yellow" title="STREAM ACTIVE"></span>
+                <span class="pixel-sq green" title="SIGNAL 100%"></span>
+              </div>
+              <div class="crt-channel-info pixel-font">
+                <span class="rec-blink">&#9679; REC</span> CH-01 // HIGHLIGHT_FEED_1080P
+              </div>
+              <div class="crt-status-badge pixel-font-sub">
+                AUDIO: STEREO &bull; 60 FPS
+              </div>
+            </div>
+
+            <!-- Responsive Video Player Container (using aspect-ratio & padding technique) -->
+            <div class="responsive-video-container">
+              <!-- Corner Pixel Brackets -->
+              <span class="frame-corner c-tl" aria-hidden="true"></span>
+              <span class="frame-corner c-tr" aria-hidden="true"></span>
+              <span class="frame-corner c-bl" aria-hidden="true"></span>
+              <span class="frame-corner c-br" aria-hidden="true"></span>
+
+              <!-- CRT Scanline & Phosphor Grid Overlay -->
+              <div class="crt-scanline-overlay" aria-hidden="true"></div>
+
+              <!-- Embedded Video Element with native controls & fallback -->
+              <video id="portfolio-video" class="pixel-video-element" controls preload="metadata"
+                poster="video-poster.jpg" playsinline>
+                <source src="portfolio-highlight.mp4" type="video/mp4" />
+                <source src="WhatsApp Video 2026-10-07 at 11.20.51 AM.mp4" type="video/mp4" />
+                <p class="video-unsupported pixel-font-sub">
+                  Your browser does not support HTML5 video streaming. You can download the showcase video directly:
+                  <a href="portfolio-highlight.mp4" download class="pixel-link">Download Showcase Video (MP4)</a>.
+                </p>
+              </video>
+            </div>
+
+            <!-- Retro Arcade Quick Control Deck -->
+            <div class="crt-control-deck">
+              <div class="deck-btn-group">
+                <button type="button" class="crt-deck-btn pixel-font" id="video-play-btn"
+                  aria-label="Play or Pause Video">
+                  <span class="deck-icon">&#9654;</span> <span class="deck-text">PLAY / PAUSE</span>
+                </button>
+                <button type="button" class="crt-deck-btn pixel-font" id="video-mute-btn"
+                  aria-label="Mute or Unmute Video">
+                  <span class="deck-icon">&#128266;</span> <span class="deck-text">MUTE / UNMUTE</span>
+                </button>
+                <button type="button" class="crt-deck-btn pixel-font" id="video-fullscreen-btn"
+                  aria-label="Toggle Fullscreen">
+                  <span class="deck-icon">&#9974;</span> <span class="deck-text">FULLSCREEN</span>
+                </button>
+              </div>
+              <div class="deck-time-tracker pixel-font-sub">
+                <span id="video-current-time">00:00</span> / <span id="video-duration">00:48</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Short Caption Explaining Video Content -->
+          <figure class="video-caption-container">
+            <figcaption class="video-caption-card pixel-hud-card">
+              <div class="caption-header">
+                <span class="caption-badge pixel-font">&#128250; VIDEO OVERVIEW &amp; CAPTION</span>
+                <span class="caption-runtime pixel-font-sub">RUNTIME: 0:48 SECONDS</span>
+              </div>
+              <p class="caption-lead">
+                <strong>Introduction &amp; Technical Highlights:</strong> This presentation introduces Shreyas H N,
+                software engineer specializing in core computer science, systems engineering, and data science. The
+                showcase highlights live demonstrations of embedded IoT prototypes, algorithmic graph traversal
+                architectures, and responsive full-stack software development.
+              </p>
+              <div class="caption-keypoints">
+                <div class="keypoint-item">
+                  <span class="keypoint-dot pixel-font">[01]</span>
+                  <span class="keypoint-text"><strong>Candidate Introduction:</strong> Academic background in Computer
+                    Science &amp; Data Science at AIT Chikkamagaluru.</span>
+                </div>
+                <div class="keypoint-item">
+                  <span class="keypoint-dot pixel-font">[02]</span>
+                  <span class="keypoint-text"><strong>Project Demonstrations:</strong> Walkthrough of the C-based
+                    Adaptive Headlights automotive system and algorithmic simulation modules.</span>
+                </div>
+                <div class="keypoint-item">
+                  <span class="keypoint-dot pixel-font">[03]</span>
+                  <span class="keypoint-text"><strong>Engineering Methodology:</strong> Clean code architecture,
+                    database normalization, and full-stack implementation philosophy.</span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SKILLS SECTION
+         Technical competencies grouped by domain: Programming,
+         Frontend, Backend, Database, and Core Engineering Concepts.
+    ======================================================== -->
+    <!-- ========================================================
+         SKILLS SECTION (PIXEL ART RPG ABILITY MATRIX)
+         Core competencies highlighted with:
+         - Category Filter Tabs for interactive browsing
+         - 8-bit RPG Core Mastery Progress Meters (C, Java, Python, DSA, Node.js, MySQL)
+         - Rich Categorized Competency Cards with styled item lists, badges, and explanatory comments
+         - Arcade Status HUD summarizing overall stats and specializations
+    ======================================================== -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">ABILITY MATRIX</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead pixel-font-sub">
+            [SYS_LOAD]: Core competencies, engineering frameworks, and algorithmic toolsets calibrated for software
+            engineering.
+          </p>
+        </header>
+
+        <!-- Interactive Category Filter Tabs -->
+        <nav class="skills-filter-nav" aria-label="Skills Filter">
+          <button class="skills-filter-btn pixel-font active" data-filter="all">
+            <span class="filter-arrow">&#9654;</span> ALL ABILITIES
+          </button>
+          <button class="skills-filter-btn pixel-font" data-filter="languages">
+            <span class="filter-arrow">&#9654;</span> 💻 LANGUAGES
+          </button>
+          <button class="skills-filter-btn pixel-font" data-filter="frameworks">
+            <span class="filter-arrow">&#9654;</span> 🌐 WEB &amp; RUNTIMES
+          </button>
+          <button class="skills-filter-btn pixel-font" data-filter="tools">
+            <span class="filter-arrow">&#9654;</span> 🗄️ DATABASES &amp; TOOLS
+          </button>
+          <button class="skills-filter-btn pixel-font" data-filter="cs">
+            <span class="filter-arrow">&#9654;</span> 🧠 CS FOUNDATIONS
+          </button>
+        </nav>
+
+        <!-- ====================================================
+             CORE MASTERY RPG PROGRESS GAUGES HUD
+             Displays pixel-art stat meters for Shreyas' primary competencies.
+             Each bar features animated pixel dither/stripes and level badges.
+        ==================================================== -->
+        <div class="skills-hud-window pixel-box" id="skills-mastery-hud">
+          <div class="hud-window-header">
+            <div class="hud-header-left">
+              <span class="hud-led-dot"></span>
+              <span class="hud-window-title pixel-font">PLAYER 1 // CORE MASTERY METERS</span>
+            </div>
+            <div class="hud-header-right">
+              <span class="hud-mode-badge pixel-font-sub">XP BARS: CALIBRATED</span>
+            </div>
+          </div>
+
+          <div class="skills-meters-grid">
+            <!-- Skill 1: C Programming (Low-Level Systems & Embedded Logic) -->
+            <!-- Represents hardware interaction, pointer memory control, and embedded C used in Adaptive Headlights -->
+            <div class="skill-meter-card">
+              <div class="meter-info-top">
+                <div class="meter-icon-title">
+                  <span class="meter-icon">⚙️</span>
+                  <div>
+                    <h4 class="meter-title pixel-font">C Language</h4>
+                    <span class="meter-desc">Systems &bull; Embedded Logic &bull; Memory</span>
+                  </div>
+                </div>
+                <div class="meter-stat-badge pixel-font">
+                  <span class="meter-lvl">LVL 90</span>
+                  <span class="meter-percent">90%</span>
+                </div>
+              </div>
+              <div class="pixel-meter-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                aria-label="C Language Mastery 90%">
+                <div class="pixel-meter-fill fill-c" style="--skill-pct: 90%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 2: Java (Object-Oriented Programming & Enterprise Logic) -->
+            <!-- Represents robust backend architecture, polymorphism, encapsulation, and type-safe systems -->
+            <div class="skill-meter-card">
+              <div class="meter-info-top">
+                <div class="meter-icon-title">
+                  <span class="meter-icon">☕</span>
+                  <div>
+                    <h4 class="meter-title pixel-font">Java (OOP)</h4>
+                    <span class="meter-desc">OOP Architecture &bull; Backend &bull; Robust APIs</span>
+                  </div>
+                </div>
+                <div class="meter-stat-badge pixel-font">
+                  <span class="meter-lvl">LVL 88</span>
+                  <span class="meter-percent">88%</span>
+                </div>
+              </div>
+              <div class="pixel-meter-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Java Mastery 88%">
+                <div class="pixel-meter-fill fill-java" style="--skill-pct: 88%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 3: Python (Data Science, Scripting & Automation) -->
+            <!-- Represents rapid prototyping, data manipulation, machine learning foundations, and automation scripts -->
+            <div class="skill-meter-card">
+              <div class="meter-info-top">
+                <div class="meter-icon-title">
+                  <span class="meter-icon">🐍</span>
+                  <div>
+                    <h4 class="meter-title pixel-font">Python</h4>
+                    <span class="meter-desc">Data Science &bull; Automation &bull; Scripting</span>
+                  </div>
+                </div>
+                <div class="meter-stat-badge pixel-font">
+                  <span class="meter-lvl">LVL 85</span>
+                  <span class="meter-percent">85%</span>
+                </div>
+              </div>
+              <div class="pixel-meter-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Python Mastery 85%">
+                <div class="pixel-meter-fill fill-python" style="--skill-pct: 85%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 4: Data Structures & Algorithms (Core Problem Solving) -->
+            <!-- Represents computational complexity analysis (Big-O), tree/graph traversals, and algorithmic rigor -->
+            <div class="skill-meter-card">
+              <div class="meter-info-top">
+                <div class="meter-icon-title">
+                  <span class="meter-icon">🧩</span>
+                  <div>
+                    <h4 class="meter-title pixel-font">DSA &bull; Algorithms</h4>
+                    <span class="meter-desc">Big-O &bull; Trees &amp; Graphs &bull; Optimization</span>
+                  </div>
+                </div>
+                <div class="meter-stat-badge pixel-font">
+                  <span class="meter-lvl">LVL 88</span>
+                  <span class="meter-percent">88%</span>
+                </div>
+              </div>
+              <div class="pixel-meter-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                aria-label="Data Structures Mastery 88%">
+                <div class="pixel-meter-fill fill-dsa" style="--skill-pct: 88%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 5: JavaScript & Node.js (Full-Stack & Asynchronous Logic) -->
+            <!-- Represents client-server execution, async/await event loops, REST API design, and DOM manipulation -->
+            <div class="skill-meter-card">
+              <div class="meter-info-top">
+                <div class="meter-icon-title">
+                  <span class="meter-icon">⚡</span>
+                  <div>
+                    <h4 class="meter-title pixel-font">JavaScript &bull; Node</h4>
+                    <span class="meter-desc">Async I/O &bull; REST APIs &bull; Full-Stack Logic</span>
+                  </div>
+                </div>
+                <div class="meter-stat-badge pixel-font">
+                  <span class="meter-lvl">LVL 84</span>
+                  <span class="meter-percent">84%</span>
+                </div>
+              </div>
+              <div class="pixel-meter-track" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"
+                aria-label="JavaScript & Node.js Mastery 84%">
+                <div class="pixel-meter-fill fill-js" style="--skill-pct: 84%;"></div>
+              </div>
+            </div>
+
+            <!-- Skill 6: MySQL & Relational Databases (Schema Design & Persistence) -->
+            <!-- Represents relational data modeling, query optimization, ACID compliance, and normalized tables -->
+            <div class="skill-meter-card">
+              <div class="meter-info-top">
+                <div class="meter-icon-title">
+                  <span class="meter-icon">🗄️</span>
+                  <div>
+                    <h4 class="meter-title pixel-font">MySQL &bull; Databases</h4>
+                    <span class="meter-desc">Schema Modeling &bull; Queries &bull; Relational Data</span>
+                  </div>
+                </div>
+                <div class="meter-stat-badge pixel-font">
+                  <span class="meter-lvl">LVL 82</span>
+                  <span class="meter-percent">82%</span>
+                </div>
+              </div>
+              <div class="pixel-meter-track" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"
+                aria-label="MySQL Mastery 82%">
+                <div class="pixel-meter-fill fill-mysql" style="--skill-pct: 82%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================
+             DETAILED CATEGORIZED COMPETENCY CARDS GRID
+             Structured lists of languages, frameworks, tools, and CS theory
+             with interactive hover cards and pixel iconography.
+        ==================================================== -->
+        <div class="skills-categories-grid" id="skills-grid">
+
+          <!-- Category 1: Programming Languages -->
+          <!-- Represents foundational coding languages utilized for embedded, desktop, and script engineering -->
+          <article class="skills-category-card pixel-skill-card" data-category="languages">
+            <div class="category-header">
+              <div class="category-icon-box">💻</div>
+              <div>
+                <span class="card-domain-tag pixel-font-sub">DOMAIN 01</span>
+                <h3 class="category-title pixel-font">Languages</h3>
+              </div>
+            </div>
+
+            <!-- Styled Competency List with Detail Notes -->
+            <ul class="skills-styled-list">
+              <!-- C Language competency: embedded programming and low-level memory allocation -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>C Language</strong></span>
+                  <span class="skill-tag-pill">SYSTEMS</span>
+                </div>
+                <p class="skill-item-desc">Hardware control, pointer operations, microcontroller sensor interfacing.</p>
+              </li>
+
+              <!-- Java competency: object-oriented patterns and robust enterprise structures -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Java</strong></span>
+                  <span class="skill-tag-pill">BACKEND</span>
+                </div>
+                <p class="skill-item-desc">Object-oriented paradigms, inheritance, collections, memory encapsulation.
+                </p>
+              </li>
+
+              <!-- Python competency: scripting and data handling -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Python</strong></span>
+                  <span class="skill-tag-pill">DATA &bull; SCRIPT</span>
+                </div>
+                <p class="skill-item-desc">Algorithmic prototyping, data science packages, automation pipelines.</p>
+              </li>
+
+              <!-- JavaScript competency: modern client and server interactivity -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>JavaScript (ES6+)</strong></span>
+                  <span class="skill-tag-pill">WEB LOGIC</span>
+                </div>
+                <p class="skill-item-desc">Event-driven scripts, async/await, modern DOM APIs, closures.</p>
+              </li>
+            </ul>
+
+            <!-- Interactive Skill Badges Container -->
+            <div class="category-chips-wrap">
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">JS ES6+</span>
+              <span class="skill-chip">C++ (Basics)</span>
+            </div>
+          </article>
+
+          <!-- Category 2: Web & Frameworks -->
+          <!-- Represents modern full-stack web architectures and responsive frontend engineering -->
+          <article class="skills-category-card pixel-skill-card" data-category="frameworks">
+            <div class="category-header">
+              <div class="category-icon-box">🌐</div>
+              <div>
+                <span class="card-domain-tag pixel-font-sub">DOMAIN 02</span>
+                <h3 class="category-title pixel-font">Web &amp; Runtimes</h3>
+              </div>
+            </div>
+
+            <ul class="skills-styled-list">
+              <!-- Node.js competency: asynchronous server-side execution -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Node.js &amp; Express</strong></span>
+                  <span class="skill-tag-pill">SERVER</span>
+                </div>
+                <p class="skill-item-desc">REST API design, routing, middleware orchestration, and JSON responses.</p>
+              </li>
+
+              <!-- HTML5 & Semantic markup competency -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Semantic HTML5</strong></span>
+                  <span class="skill-tag-pill">STRUCTURE</span>
+                </div>
+                <p class="skill-item-desc">Accessible document structures, SEO tags, ARIA attributes, semantic tags.</p>
+              </li>
+
+              <!-- Modern CSS3 and responsive layout design -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>CSS3 &amp; Pixel Art</strong></span>
+                  <span class="skill-tag-pill">STYLING</span>
+                </div>
+                <p class="skill-item-desc">Flexbox, CSS Grid, media query themes, scanline effects, custom animations.
+                </p>
+              </li>
+
+              <!-- RESTful API integration and client-server contracts -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>RESTful API Design</strong></span>
+                  <span class="skill-tag-pill">INTERFACE</span>
+                </div>
+                <p class="skill-item-desc">HTTP conventions, status codes, request-response handling, payload design.
+                </p>
+              </li>
+            </ul>
+
+            <div class="category-chips-wrap">
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">Responsive UI</span>
+            </div>
+          </article>
+
+          <!-- Category 3: Databases & Developer Tools -->
+          <!-- Represents relational persistence, version control, and development environments -->
+          <article class="skills-category-card pixel-skill-card" data-category="tools">
+            <div class="category-header">
+              <div class="category-icon-box">🗄️</div>
+              <div>
+                <span class="card-domain-tag pixel-font-sub">DOMAIN 03</span>
+                <h3 class="category-title pixel-font">Tools &amp; DBs</h3>
+              </div>
+            </div>
+
+            <ul class="skills-styled-list">
+              <!-- MySQL relational database management -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>MySQL Relational DB</strong></span>
+                  <span class="skill-tag-pill">SQL</span>
+                </div>
+                <p class="skill-item-desc">Relational modeling, primary/foreign keys, joins, index optimizations.</p>
+              </li>
+
+              <!-- Git & GitHub version control workflows -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Git &amp; GitHub</strong></span>
+                  <span class="skill-tag-pill">VCS</span>
+                </div>
+                <p class="skill-item-desc">Branching, merge workflows, commit hygiene, collaborative code repos.</p>
+              </li>
+
+              <!-- Development environments and IDEs -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>VS Code &amp; Linux CLI</strong></span>
+                  <span class="skill-tag-pill">DEV ENV</span>
+                </div>
+                <p class="skill-item-desc">Command-line scripting, debugger configurations, terminal efficiency.</p>
+              </li>
+
+              <!-- Hardware and Sensor Tooling -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>IoT &amp; Hardware Tools</strong></span>
+                  <span class="skill-tag-pill">HARDWARE</span>
+                </div>
+                <p class="skill-item-desc">Microcontroller flashing, light sensors, breadboarding, and actuators.</p>
+              </li>
+            </ul>
+
+            <div class="category-chips-wrap">
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Linux CLI</span>
+            </div>
+          </article>
+
+          <!-- Category 4: Computer Science Foundations & Data Science -->
+          <!-- Represents the theoretical backbone ensuring performant, scalable, and algorithmic software -->
+          <article class="skills-category-card pixel-skill-card" data-category="cs">
+            <div class="category-header">
+              <div class="category-icon-box">🧠</div>
+              <div>
+                <span class="card-domain-tag pixel-font-sub">DOMAIN 04</span>
+                <h3 class="category-title pixel-font">CS Foundations</h3>
+              </div>
+            </div>
+
+            <ul class="skills-styled-list">
+              <!-- Data Structures & Algorithms theoretical grounding -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Data Structures (DSA)</strong></span>
+                  <span class="skill-tag-pill">ALGORITHMS</span>
+                </div>
+                <p class="skill-item-desc">Arrays, stacks, queues, linked lists, binary trees, sorting algorithms.</p>
+              </li>
+
+              <!-- Object-Oriented Design principles -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>OOP Design Patterns</strong></span>
+                  <span class="skill-tag-pill">ARCHITECTURE</span>
+                </div>
+                <p class="skill-item-desc">SOLID concepts, design patterns, separation of concerns, modular code.</p>
+              </li>
+
+              <!-- Operating Systems theory -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Operating Systems</strong></span>
+                  <span class="skill-tag-pill">SYSTEMS</span>
+                </div>
+                <p class="skill-item-desc">Process scheduling, threads, virtual memory, paging, CPU cycles.</p>
+              </li>
+
+              <!-- Data Science & Analytical concepts -->
+              <li class="skill-list-item">
+                <div class="skill-item-header">
+                  <span class="skill-bullet">&#9654;</span>
+                  <span class="skill-name"><strong>Data Science Basics</strong></span>
+                  <span class="skill-tag-pill">DATA SCI</span>
+                </div>
+                <p class="skill-item-desc">Statistical methods, dataset cleansing, exploratory analysis, modeling.</p>
+              </li>
+            </ul>
+
+            <div class="category-chips-wrap">
+              <span class="skill-chip">DSA</span>
+              <span class="skill-chip">OOP</span>
+              <span class="skill-chip">OS Concepts</span>
+              <span class="skill-chip">Big-O</span>
+              <span class="skill-chip">Data Science</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- ====================================================
+             ARCADE SKILL STATUS STRIP / STATS BAR
+             Provides an engaging retro gamer summary of Shreyas' skillset.
+        ==================================================== -->
+        <div class="skills-summary-banner pixel-box">
+          <div class="summary-badge-item">
+            <span class="summary-badge-icon">⚡</span>
+            <div class="summary-badge-text">
+              <span class="badge-label pixel-font">ENGINEERING CLASS</span>
+              <span class="badge-val">FULL-STACK &bull; SYSTEMS SPECIALIST</span>
+            </div>
+          </div>
+          <div class="summary-badge-divider"></div>
+          <div class="summary-badge-item">
+            <span class="summary-badge-icon">⭐</span>
+            <div class="summary-badge-text">
+              <span class="badge-label pixel-font">PASSIVE TRAIT</span>
+              <span class="badge-val">+20% ALGORITHMIC EFFICIENCY</span>
+            </div>
+          </div>
+          <div class="summary-badge-divider"></div>
+          <div class="summary-badge-item">
+            <span class="summary-badge-icon">🎯</span>
+            <div class="summary-badge-text">
+              <span class="badge-label pixel-font">CURRENT OBJECTIVE</span>
+              <span class="badge-val">SOFTWARE DEVELOPMENT INTERNSHIPS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TIMELINE SECTION (EXPERIENCE & EDUCATION)
+         Chronological journey highlighting academic milestones,
+         internships, certifications, and experience.
+    ======================================================== -->
+    <!-- ========================================================
+         TIMELINE SECTION (QUEST LOG & MILESTONES)
+         Chronological journey tracking:
+         - Higher Education (B.E. CS & Data Science)
+         - Major Flagship Projects (Adaptive Headlights Automotive System)
+         - Pre-University Science (12th / PUC)
+         - Secondary Schooling (10th / SSLC)
+         - Present Career Goal (Software Engineer & Open to Roles)
+         Structured with rounded cards, CSS transitions, and filter tabs.
+    ======================================================== -->
+    <section class="timeline-section section-padding" id="timeline">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">QUEST LOG</span>
+          <h2 class="section-title">Timeline &amp; Milestones</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead pixel-font-sub">
+            [SYS_CHRONOLOGY]: Chronological journey tracking academic milestones, flagship engineering projects, and
+            technical achievements.
+          </p>
+        </header>
+
+        <!-- Interactive Timeline Category Filter Tabs -->
+        <nav class="timeline-filter-nav" aria-label="Timeline Milestones Filter">
+          <button class="timeline-filter-btn pixel-font active" data-timeline-filter="all">
+            <span class="filter-arrow">&#9654;</span> ALL EVENTS
+          </button>
+          <button class="timeline-filter-btn pixel-font" data-timeline-filter="education">
+            <span class="filter-arrow">&#9654;</span> 🎓 EDUCATION
+          </button>
+          <button class="timeline-filter-btn pixel-font" data-timeline-filter="project">
+            <span class="filter-arrow">&#9654;</span> 🚀 MAJOR PROJECTS
+          </button>
+        </nav>
+
+        <!-- Timeline Spine & Cards Container -->
+        <div class="timeline-spine-wrapper">
+          <div class="timeline-central-spine" aria-hidden="true"></div>
+
+          <!-- Timeline Event 1: Career Quest / Present -->
+          <article class="timeline-item timeline-right" data-timeline-cat="project">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-dot pulse-emerald"></span>
+            </div>
+            <div class="timeline-rounded-card">
+              <div class="timeline-card-header">
+                <div class="timeline-badge-group">
+                  <span class="timeline-period-badge pixel-font-sub">2025 — PRESENT</span>
+                  <span class="timeline-cat-pill pill-career pixel-font">CAREER QUEST</span>
+                </div>
+                <div class="timeline-icon-box">⚡</div>
+              </div>
+
+              <div class="timeline-card-body">
+                <h3 class="timeline-title">Software Engineer &bull; Fresher</h3>
+                <h4 class="timeline-institution">Open to Full-Stack &amp; Systems Engineering Roles</h4>
+                <p class="timeline-description">
+                  Actively advancing practical engineering capabilities through algorithmic problem solving in C/Java,
+                  building full-stack web applications with Node.js, and seeking impactful software development
+                  internships and entry-level positions.
+                </p>
+
+                <div class="timeline-metric-row">
+                  <span class="metric-chip highlight-chip">
+                    <span class="chip-dot"></span> STATUS: AVAILABLE FOR QUESTS
+                  </span>
+                  <span class="metric-chip">BASE: KARNATAKA, INDIA</span>
+                </div>
+
+                <div class="timeline-tags-wrap">
+                  <span class="timeline-skill-tag">Full-Stack</span>
+                  <span class="timeline-skill-tag">Systems Logic</span>
+                  <span class="timeline-skill-tag">Competitive Coding</span>
+                  <span class="timeline-skill-tag">Open Source</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Event 2: Higher Education (B.E. CS & Data Science) -->
+          <article class="timeline-item timeline-left" data-timeline-cat="education">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-rounded-card">
+              <div class="timeline-card-header">
+                <div class="timeline-badge-group">
+                  <span class="timeline-period-badge pixel-font-sub">2025 — 2029 (EXPECTED)</span>
+                  <span class="timeline-cat-pill pill-edu pixel-font">DEGREE</span>
+                </div>
+                <div class="timeline-icon-box">🎓</div>
+              </div>
+
+              <div class="timeline-card-body">
+                <h3 class="timeline-title">B.E. in Computer Science &amp; Data Science</h3>
+                <h4 class="timeline-institution">Adichunchanagiri Institute of Technology, Chikkamagaluru</h4>
+                <p class="timeline-description">
+                  Pursuing rigorous engineering coursework covering low-level computing architectures, Data Structures
+                  &amp; Algorithms, Relational Database Management Systems, Object-Oriented Software Design, and applied
+                  Data Science methodologies.
+                </p>
+
+                <div class="timeline-metric-row">
+                  <span class="metric-chip">CGPA: 7.0</span>
+                  <span class="metric-chip">AFFILIATION: VTU BELAGAVI</span>
+                </div>
+
+                <div class="timeline-tags-wrap">
+                  <span class="timeline-skill-tag">Data Structures</span>
+                  <span class="timeline-skill-tag">Algorithms</span>
+                  <span class="timeline-skill-tag">Java OOP</span>
+                  <span class="timeline-skill-tag">DBMS</span>
+                  <span class="timeline-skill-tag">Data Science</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Event 3: Major Project (Adaptive Headlights System) -->
+          <article class="timeline-item timeline-right" data-timeline-cat="project">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-dot pulse-amber"></span>
+            </div>
+            <div class="timeline-rounded-card card-featured">
+              <div class="timeline-card-header">
+                <div class="timeline-badge-group">
+                  <span class="timeline-period-badge pixel-font-sub">OCT 2024 &bull; 30-DAY SPRINT</span>
+                  <span class="timeline-cat-pill pill-project pixel-font">MAJOR PROJECT</span>
+                </div>
+                <div class="timeline-icon-box">🚗</div>
+              </div>
+
+              <div class="timeline-card-body">
+                <h3 class="timeline-title">Adaptive Headlights System (IoT Automotive)</h3>
+                <h4 class="timeline-institution">Lead Developer &bull; Embedded Systems Prototype</h4>
+                <p class="timeline-description">
+                  Architected and engineered a functional automotive safety prototype in C. Implemented ambient light
+                  sensing arrays (LDRs) and servo steering actuators to dynamically dip high beams upon detecting
+                  oncoming vehicle headlights and re-angle illumination around sharp road bends.
+                </p>
+
+                <div class="timeline-metric-row">
+                  <span class="metric-chip highlight-chip">
+                    <span class="chip-dot amber"></span> FLAGSHIP PROTOTYPE
+                  </span>
+                  <span class="metric-chip">STATUS: COMPLETED</span>
+                </div>
+
+                <div class="timeline-tags-wrap">
+                  <span class="timeline-skill-tag">Embedded C</span>
+                  <span class="timeline-skill-tag">Light Sensors (LDR)</span>
+                  <span class="timeline-skill-tag">Hardware Logic</span>
+                  <span class="timeline-skill-tag">Microcontrollers</span>
+                  <span class="timeline-skill-tag">Automotive IoT</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Event 4: Pre-University Science College (12th / PUC) -->
+          <article class="timeline-item timeline-left" data-timeline-cat="education">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-rounded-card">
+              <div class="timeline-card-header">
+                <div class="timeline-badge-group">
+                  <span class="timeline-period-badge pixel-font-sub">2023 — 2025</span>
+                  <span class="timeline-cat-pill pill-edu pixel-font">PRE-UNIVERSITY</span>
+                </div>
+                <div class="timeline-icon-box">📚</div>
+              </div>
+
+              <div class="timeline-card-body">
+                <h3 class="timeline-title">12th / Pre-University Certificate (PUC Science)</h3>
+                <h4 class="timeline-institution">Vikasa PU College, Shimoga</h4>
+                <p class="timeline-description">
+                  Graduated with a demanding Science stream curriculum, developing strong analytical thinking and
+                  quantitative rigor across Physics, Chemistry, and Advanced Mathematics, establishing the mathematical
+                  foundations for computer science algorithms.
+                </p>
+
+                <div class="timeline-metric-row">
+                  <span class="metric-chip highlight-chip">
+                    <span class="chip-dot"></span> SCORE: 87%
+                  </span>
+                  <span class="metric-chip">STREAM: PCMB SCIENCE</span>
+                </div>
+
+                <div class="timeline-tags-wrap">
+                  <span class="timeline-skill-tag">Mathematics</span>
+                  <span class="timeline-skill-tag">Physics</span>
+                  <span class="timeline-skill-tag">Logical Deduction</span>
+                  <span class="timeline-skill-tag">Analytical Science</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Event 5: Secondary Schooling (10th / SSLC) -->
+          <article class="timeline-item timeline-right" data-timeline-cat="education">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-rounded-card">
+              <div class="timeline-card-header">
+                <div class="timeline-badge-group">
+                  <span class="timeline-period-badge pixel-font-sub">2013 — 2023</span>
+                  <span class="timeline-cat-pill pill-edu pixel-font">SECONDARY</span>
+                </div>
+                <div class="timeline-icon-box">🏫</div>
+              </div>
+
+              <div class="timeline-card-body">
+                <h3 class="timeline-title">10th Standard / SSLC (Secondary Education)</h3>
+                <h4 class="timeline-institution">SRVK School, Shimoga</h4>
+                <p class="timeline-description">
+                  Completed secondary education with high academic distinction, receiving foundational commendations in
+                  physical sciences and mathematics, and initiating self-driven exploration in early computing
+                  fundamentals.
+                </p>
+
+                <div class="timeline-metric-row">
+                  <span class="metric-chip highlight-chip">
+                    <span class="chip-dot"></span> DISTINCTION: 92%
+                  </span>
+                  <span class="metric-chip">BOARD: KSEEB</span>
+                </div>
+
+                <div class="timeline-tags-wrap">
+                  <span class="timeline-skill-tag">General Science</span>
+                  <span class="timeline-skill-tag">Mathematics</span>
+                  <span class="timeline-skill-tag">Early Computing</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PROJECTS SECTION
+         Showcase featured engineering projects, tech stack badges,
+         descriptions, and interactive demo/code links.
+    ======================================================== -->
+    <!-- ========================================================
+         PROJECTS SECTION (PORTFOLIO & SYSTEM ARCHITECTURE)
+         Displays engineering project thumbnails with:
+         - Clickable thumbnails with hover overlays that open detailed modal views
+         - Consistent margins, padding, badges, and technical tags
+         - Direct repository links and interactive modal triggers
+         - Comprehensive code comments explaining thumbnail-to-detail connections
+    ======================================================== -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">QUEST REPOSITORY</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead pixel-font-sub">
+            [SYS_CATALOG]: Production prototypes, algorithmic simulators, and systems architectures. Click any thumbnail
+            to open the detailed specification dossier.
+          </p>
+        </header>
+
+        <!-- Projects Grid Container: Uniform margins, padding, and responsive layout -->
+        <div class="projects-grid">
+
+          <!-- ====================================================
+               PROJECT 1: ADAPTIVE HEADLIGHTS SYSTEM
+               THUMBNAIL CONNECTION:
+               - The clickable thumbnail (.project-thumbnail-btn) uses
+                 data-modal-target="modal-headlights" to trigger the
+                 #modal-headlights detailed dossier window.
+               - Also includes a direct GitHub source link.
+          ==================================================== -->
+          <article class="project-card pixel-hud-card" data-project-category="embedded">
+            <!-- Clickable Project Thumbnail with Hover Zoom & Overlay -->
+            <div class="project-thumbnail-wrap">
+              <button class="project-thumbnail-btn" data-modal-target="modal-headlights"
+                aria-label="Open detailed specifications for Adaptive Headlights System"
+                title="Click to view detailed specs">
+                <img src="project-headlights.jpg" alt="Adaptive Headlights Automotive Prototype Thumbnail"
+                  class="project-thumbnail-img" />
+                <div class="thumbnail-hover-overlay">
+                  <span class="overlay-badge pixel-font">&#128269; VIEW SPECS</span>
+                </div>
+              </button>
+              <div class="project-category-badge pixel-font-sub">
+                EMBEDDED C &bull; IoT
+              </div>
+            </div>
+
+            <!-- Consistent Card Body -->
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-duration pixel-font-sub">OCT 2024 &bull; 30-DAY SPRINT</span>
+                <span class="project-status-pill status-complete pixel-font-sub">VERIFIED PROTOTYPE</span>
+              </div>
+
+              <h3 class="project-title">Adaptive Headlights Automotive System</h3>
+              <p class="project-desc">
+                An intelligent vehicle lighting prototype built in C that dynamically prevents road glare. Utilizes
+                ambient light sensors (LDRs) and servo motors to automatically dip high beams for oncoming vehicles and
+                rotate illumination around curved mountain roads.
+              </p>
+
+              <!-- Technical Competency Tags -->
+              <div class="project-tech-stack">
+                <span class="tech-tag">C Language</span>
+                <span class="tech-tag">Embedded Systems</span>
+                <span class="tech-tag">LDR Sensors</span>
+                <span class="tech-tag">Servo Motors</span>
+                <span class="tech-tag">Automotive IoT</span>
+              </div>
+
+              <!-- Action Buttons: Details Modal Trigger & Direct Code Link -->
+              <div class="project-action-links">
+                <!-- Thumbnail Detail Link: Opens Modal -->
+                <button class="project-btn-detail pixel-font" data-modal-target="modal-headlights">
+                  <span class="btn-icon">&#128269;</span> VIEW SPECS
+                </button>
+                <!-- Direct Project Link -->
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="project-btn-code pixel-font" aria-label="View source code on GitHub">
+                  <span class="btn-icon">&#128187;</span> GITHUB
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ====================================================
+               PROJECT 2: ALGORITHMIC PATHFINDING VISUALIZER
+               THUMBNAIL CONNECTION:
+               - The clickable thumbnail (.project-thumbnail-btn) uses
+                 data-modal-target="modal-pathfinder" to open the
+                 #modal-pathfinder detailed dossier window.
+          ==================================================== -->
+          <article class="project-card pixel-hud-card" data-project-category="dsa">
+            <!-- Clickable Project Thumbnail with Hover Zoom & Overlay -->
+            <div class="project-thumbnail-wrap">
+              <button class="project-thumbnail-btn" data-modal-target="modal-pathfinder"
+                aria-label="Open detailed specifications for Algorithmic Pathfinding Visualizer"
+                title="Click to view detailed specs">
+                <img src="project-pathfinder.jpg" alt="Algorithmic Pathfinding Visualizer Thumbnail"
+                  class="project-thumbnail-img" />
+                <div class="thumbnail-hover-overlay">
+                  <span class="overlay-badge pixel-font">&#128269; VIEW SPECS</span>
+                </div>
+              </button>
+              <div class="project-category-badge pixel-font-sub">
+                ALGORITHMS &bull; DSA
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-duration pixel-font-sub">ACADEMIC &bull; DSA LAB</span>
+                <span class="project-status-pill status-complete pixel-font-sub">ALGO VERIFIED</span>
+              </div>
+
+              <h3 class="project-title">Algorithmic Pathfinding &amp; Maze Explorer</h3>
+              <p class="project-desc">
+                An interactive graph traversal visualizer implementing Dijkstra's Algorithm, A* Search, BFS, and DFS on
+                2D grid topologies. Demonstrates real-time heuristic cost evaluation, frontier exploration, and Big-O
+                computational trade-offs.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Data Structures</span>
+                <span class="tech-tag">Graph Theory</span>
+                <span class="tech-tag">A* Search</span>
+                <span class="tech-tag">Big-O Analysis</span>
+              </div>
+
+              <div class="project-action-links">
+                <button class="project-btn-detail pixel-font" data-modal-target="modal-pathfinder">
+                  <span class="btn-icon">&#128269;</span> VIEW SPECS
+                </button>
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="project-btn-code pixel-font" aria-label="View source code on GitHub">
+                  <span class="btn-icon">&#128187;</span> GITHUB
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ====================================================
+               PROJECT 3: RELATIONAL STUDENT DATABASE & ANALYTICS
+               THUMBNAIL CONNECTION:
+               - The clickable thumbnail (.project-thumbnail-btn) uses
+                 data-modal-target="modal-database" to open the
+                 #modal-database detailed dossier window.
+          ==================================================== -->
+          <article class="project-card pixel-hud-card" data-project-category="database">
+            <!-- Clickable Project Thumbnail with Hover Zoom & Overlay -->
+            <div class="project-thumbnail-wrap">
+              <button class="project-thumbnail-btn" data-modal-target="modal-database"
+                aria-label="Open detailed specifications for Relational Database & Analytics System"
+                title="Click to view detailed specs">
+                <img src="project-database.jpg" alt="Relational Database System Thumbnail"
+                  class="project-thumbnail-img" />
+                <div class="thumbnail-hover-overlay">
+                  <span class="overlay-badge pixel-font">&#128269; VIEW SPECS</span>
+                </div>
+              </button>
+              <div class="project-category-badge pixel-font-sub">
+                DATABASES &bull; SQL
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-duration pixel-font-sub">COURSEWORK &bull; DBMS</span>
+                <span class="project-status-pill status-complete pixel-font-sub">SCHEMA NORMALIZED</span>
+              </div>
+
+              <h3 class="project-title">Relational Student Records &amp; Analytics</h3>
+              <p class="project-desc">
+                A 3NF-normalized relational database engine in MySQL backed by Java JDBC for student milestone
+                administration. Features indexed query optimization, transaction isolation, entity-relationship
+                integrity, and statistical grade performance aggregates.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Java JDBC</span>
+                <span class="tech-tag">Schema Design</span>
+                <span class="tech-tag">Query Optimization</span>
+                <span class="tech-tag">ACID Transactions</span>
+              </div>
+
+              <div class="project-action-links">
+                <button class="project-btn-detail pixel-font" data-modal-target="modal-database">
+                  <span class="btn-icon">&#128269;</span> VIEW SPECS
+                </button>
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="project-btn-code pixel-font" aria-label="View source code on GitHub">
+                  <span class="btn-icon">&#128187;</span> GITHUB
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ====================================================
+               PROJECT 4: RETRO DEVELOPER PLATFORM & CONSOLE API
+               THUMBNAIL CONNECTION:
+               - The clickable thumbnail (.project-thumbnail-btn) uses
+                 data-modal-target="modal-portfolio" to open the
+                 #modal-portfolio detailed dossier window.
+          ==================================================== -->
+          <article class="project-card pixel-hud-card" data-project-category="web">
+            <!-- Clickable Project Thumbnail with Hover Zoom & Overlay -->
+            <div class="project-thumbnail-wrap">
+              <button class="project-thumbnail-btn" data-modal-target="modal-portfolio"
+                aria-label="Open detailed specifications for Developer Platform & Terminal API"
+                title="Click to view detailed specs">
+                <img src="hero-bg.jpg" alt="Developer Platform Thumbnail" class="project-thumbnail-img" />
+                <div class="thumbnail-hover-overlay">
+                  <span class="overlay-badge pixel-font">&#128269; VIEW SPECS</span>
+                </div>
+              </button>
+              <div class="project-category-badge pixel-font-sub">
+                FULL-STACK &bull; WEB
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-duration pixel-font-sub">LIVE PRODUCTION BUILD</span>
+                <span class="project-status-pill status-active pixel-font-sub">DEPLOYED</span>
+              </div>
+
+              <h3 class="project-title">Retro Developer Portfolio &amp; Terminal Engine</h3>
+              <p class="project-desc">
+                A high-performance personal engineering website built from scratch with zero heavy CSS libraries.
+                Features auto-detecting OS night mode via CSS media queries, CRT scanline effects, 8-bit bot simulator,
+                and responsive vertical navigation.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">Vanilla CSS3</span>
+                <span class="tech-tag">HTML5 Semantic</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Responsive UI</span>
+              </div>
+
+              <div class="project-action-links">
+                <button class="project-btn-detail pixel-font" data-modal-target="modal-portfolio">
+                  <span class="btn-icon">&#128269;</span> VIEW SPECS
+                </button>
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="project-btn-code pixel-font" aria-label="View source code on GitHub">
+                  <span class="btn-icon">&#128187;</span> GITHUB
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           PROJECT DETAILED VIEW MODALS CONTAINER
+           Each modal matches a project thumbnail and provides
+           in-depth technical specifications, problem descriptions,
+           hardware/software architecture, and direct links.
+      ==================================================== -->
+      <div id="project-modals-container" aria-hidden="true">
+
+        <!-- MODAL 1: Adaptive Headlights System Detail -->
+        <!-- CONNECTED FROM: Thumbnail button with data-modal-target="modal-headlights" -->
+        <div class="project-modal-backdrop" id="modal-headlights" role="dialog" aria-modal="true"
+          aria-labelledby="modal-headlights-title">
+          <div class="project-modal-content pixel-box">
+            <div class="modal-titlebar">
+              <div class="titlebar-controls">
+                <span class="pixel-sq red"></span>
+                <span class="pixel-sq yellow"></span>
+                <span class="pixel-sq green"></span>
+              </div>
+              <span class="modal-titlebar-title pixel-font" id="modal-headlights-title">PROJECT SPECS // ADAPTIVE
+                HEADLIGHTS</span>
+              <button class="modal-close-btn pixel-font" data-modal-close
+                aria-label="Close Project Specifications">&times; CLOSE</button>
+            </div>
+
+            <div class="modal-body-scroll">
+              <!-- High-Res Thumbnail Banner with Scanlines -->
+              <div class="modal-media-banner">
+                <img src="project-headlights.jpg" alt="Adaptive Headlights Full Architectural View"
+                  class="modal-banner-img" />
+                <div class="modal-scanlines" aria-hidden="true"></div>
+              </div>
+
+              <!-- Quick Specs Matrix Table -->
+              <div class="modal-specs-table">
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">DOMAIN:</span>
+                  <span class="spec-v">Embedded Systems &bull; IoT</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">TIMELINE:</span>
+                  <span class="spec-v">Oct 2024 (30-Day Sprint)</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">ROLE:</span>
+                  <span class="spec-v">Sole Lead Developer</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">STATUS:</span>
+                  <span class="spec-v highlight-green">Working Prototype Verified</span>
+                </div>
+              </div>
+
+              <!-- Detailed Project Narrative -->
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">PROBLEM STATEMENT</h4>
+                <p class="modal-block-text">
+                  On dark, winding roads and highways, conventional high-beam headlights frequently cause severe optical
+                  glare for oncoming motorists, triggering temporary blindness and causing serious collisions.
+                  Concurrently, static headlights fail to adequately illuminate road curves ahead of steering
+                  initiation.
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">ENGINEERING ARCHITECTURE</h4>
+                <p class="modal-block-text">
+                  Engineered in low-level C on a microcontroller platform. Implemented ambient Light-Dependent Resistors
+                  (LDRs) positioned with optical baffles to detect oncoming headlamp lux levels. Programmed an analog
+                  comparator loop with debounce and moving-average thresholds to prevent light flicker. Integrated a
+                  precision servo motor mechanism that dynamically swivels headlight angles in real-time according to
+                  curved steering trajectories.
+                </p>
+              </div>
+
+              <!-- Tech Stack Badges -->
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">TECHNOLOGY STACK</h4>
+                <div class="modal-chips-row">
+                  <span class="pixel-chip">C Programming</span>
+                  <span class="pixel-chip">Embedded Systems</span>
+                  <span class="pixel-chip">LDR Sensors</span>
+                  <span class="pixel-chip">Servo Actuators</span>
+                  <span class="pixel-chip">Analog I/O</span>
+                  <span class="pixel-chip">Microcontroller Flashing</span>
+                </div>
+              </div>
+
+              <!-- Modal Action Links -->
+              <div class="modal-footer-actions">
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="pixel-btn pixel-btn-primary">
+                  <span>&#128187;</span> VIEW REPOSITORY ON GITHUB
+                </a>
+                <button class="pixel-btn pixel-btn-secondary" data-modal-close>
+                  <span>&#10006;</span> DISMISS SPECS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL 2: Pathfinding Visualizer Detail -->
+        <!-- CONNECTED FROM: Thumbnail button with data-modal-target="modal-pathfinder" -->
+        <div class="project-modal-backdrop" id="modal-pathfinder" role="dialog" aria-modal="true"
+          aria-labelledby="modal-pathfinder-title">
+          <div class="project-modal-content pixel-box">
+            <div class="modal-titlebar">
+              <div class="titlebar-controls">
+                <span class="pixel-sq red"></span>
+                <span class="pixel-sq yellow"></span>
+                <span class="pixel-sq green"></span>
+              </div>
+              <span class="modal-titlebar-title pixel-font" id="modal-pathfinder-title">PROJECT SPECS // ALGORITHMIC
+                EXPLORER</span>
+              <button class="modal-close-btn pixel-font" data-modal-close
+                aria-label="Close Project Specifications">&times; CLOSE</button>
+            </div>
+
+            <div class="modal-body-scroll">
+              <div class="modal-media-banner">
+                <img src="project-pathfinder.jpg" alt="Pathfinding Visualizer Full View" class="modal-banner-img" />
+                <div class="modal-scanlines" aria-hidden="true"></div>
+              </div>
+
+              <div class="modal-specs-table">
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">DOMAIN:</span>
+                  <span class="spec-v">Data Structures &bull; Algorithms</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">LANGUAGE:</span>
+                  <span class="spec-v">Java (OOP)</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">COMPLEXITY:</span>
+                  <span class="spec-v">O((V + E) log V) Dijkstra</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">STATUS:</span>
+                  <span class="spec-v highlight-green">Algorithm Verified</span>
+                </div>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">ALGORITHMIC SCOPE</h4>
+                <p class="modal-block-text">
+                  Constructed to demystify complex graph traversal mechanics. Models 2D matrix grids as weighted
+                  adjacency graph structures, enabling real-time comparisons between uninformed searches (Breadth-First
+                  Search, Depth-First Search) and informed heuristic searches (A* Search and Dijkstra's Shortest Path).
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">KEY IMPLEMENTATIONS</h4>
+                <p class="modal-block-text">
+                  Utilizes a custom Priority Queue with min-heap ordering for Dijkstra and A*. Supports dynamic wall
+                  generation, recursive backtracker maze generation, and heuristic cost switches (Manhattan distance vs.
+                  Euclidean distance).
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">TECHNOLOGY STACK</h4>
+                <div class="modal-chips-row">
+                  <span class="pixel-chip">Java</span>
+                  <span class="pixel-chip">Graph Algorithms</span>
+                  <span class="pixel-chip">A* Heuristics</span>
+                  <span class="pixel-chip">Priority Queues</span>
+                  <span class="pixel-chip">Min-Heap</span>
+                  <span class="pixel-chip">Big-O Optimization</span>
+                </div>
+              </div>
+
+              <div class="modal-footer-actions">
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="pixel-btn pixel-btn-primary">
+                  <span>&#128187;</span> VIEW REPOSITORY ON GITHUB
+                </a>
+                <button class="pixel-btn pixel-btn-secondary" data-modal-close>
+                  <span>&#10006;</span> DISMISS SPECS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL 3: Relational Student Database Detail -->
+        <!-- CONNECTED FROM: Thumbnail button with data-modal-target="modal-database" -->
+        <div class="project-modal-backdrop" id="modal-database" role="dialog" aria-modal="true"
+          aria-labelledby="modal-database-title">
+          <div class="project-modal-content pixel-box">
+            <div class="modal-titlebar">
+              <div class="titlebar-controls">
+                <span class="pixel-sq red"></span>
+                <span class="pixel-sq yellow"></span>
+                <span class="pixel-sq green"></span>
+              </div>
+              <span class="modal-titlebar-title pixel-font" id="modal-database-title">PROJECT SPECS // STUDENT
+                DBMS</span>
+              <button class="modal-close-btn pixel-font" data-modal-close
+                aria-label="Close Project Specifications">&times; CLOSE</button>
+            </div>
+
+            <div class="modal-body-scroll">
+              <div class="modal-media-banner">
+                <img src="project-database.jpg" alt="Student Database Schema and Analytics" class="modal-banner-img" />
+                <div class="modal-scanlines" aria-hidden="true"></div>
+              </div>
+
+              <div class="modal-specs-table">
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">DOMAIN:</span>
+                  <span class="spec-v">Relational Database &bull; SQL</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">ENGINE:</span>
+                  <span class="spec-v">MySQL InnoDB</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">NORMALIZATION:</span>
+                  <span class="spec-v">Third Normal Form (3NF)</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">STATUS:</span>
+                  <span class="spec-v highlight-green">ACID Compliant</span>
+                </div>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">SYSTEM OVERVIEW</h4>
+                <p class="modal-block-text">
+                  A high-integrity university academic records repository built to maintain error-free student course
+                  registrations, semester grade points, departmental hierarchies, and performance reports. Eliminates
+                  update and deletion anomalies via rigorous 3NF normalization.
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">DATA ARCHITECTURE &amp; PERFORMANCE</h4>
+                <p class="modal-block-text">
+                  Designed comprehensive ER models with composite primary keys, cascade foreign constraints, and
+                  optimized B-Tree indexing on student USNs and semester credits. Integrated a Java JDBC connector layer
+                  with prepared statements to prevent SQL injection vulnerabilities.
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">TECHNOLOGY STACK</h4>
+                <div class="modal-chips-row">
+                  <span class="pixel-chip">MySQL</span>
+                  <span class="pixel-chip">Relational Modeling</span>
+                  <span class="pixel-chip">Java JDBC</span>
+                  <span class="pixel-chip">SQL Indexing</span>
+                  <span class="pixel-chip">ACID Compliance</span>
+                  <span class="pixel-chip">Database Normalization</span>
+                </div>
+              </div>
+
+              <div class="modal-footer-actions">
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="pixel-btn pixel-btn-primary">
+                  <span>&#128187;</span> VIEW REPOSITORY ON GITHUB
+                </a>
+                <button class="pixel-btn pixel-btn-secondary" data-modal-close>
+                  <span>&#10006;</span> DISMISS SPECS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL 4: Developer Portfolio & Terminal Console Detail -->
+        <!-- CONNECTED FROM: Thumbnail button with data-modal-target="modal-portfolio" -->
+        <div class="project-modal-backdrop" id="modal-portfolio" role="dialog" aria-modal="true"
+          aria-labelledby="modal-portfolio-title">
+          <div class="project-modal-content pixel-box">
+            <div class="modal-titlebar">
+              <div class="titlebar-controls">
+                <span class="pixel-sq red"></span>
+                <span class="pixel-sq yellow"></span>
+                <span class="pixel-sq green"></span>
+              </div>
+              <span class="modal-titlebar-title pixel-font" id="modal-portfolio-title">PROJECT SPECS // DEVELOPER
+                PLATFORM</span>
+              <button class="modal-close-btn pixel-font" data-modal-close
+                aria-label="Close Project Specifications">&times; CLOSE</button>
+            </div>
+
+            <div class="modal-body-scroll">
+              <div class="modal-media-banner">
+                <img src="hero-bg.jpg" alt="Developer Portfolio Full Workstation" class="modal-banner-img" />
+                <div class="modal-scanlines" aria-hidden="true"></div>
+              </div>
+
+              <div class="modal-specs-table">
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">DOMAIN:</span>
+                  <span class="spec-v">Frontend &bull; Full-Stack Web</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">FRAMEWORK:</span>
+                  <span class="spec-v">Pure Vanilla (No Bloat)</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">THEME:</span>
+                  <span class="spec-v">OS Auto-Sync &bull; Media Query</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-k pixel-font-sub">STATUS:</span>
+                  <span class="spec-v highlight-green">Deployed Production</span>
+                </div>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">DESIGN &amp; PERFORMANCE PHILOSOPHY</h4>
+                <p class="modal-block-text">
+                  Engineered with an emphasis on rich aesthetics, pixel art craftsmanship, and lightning-fast load times
+                  without external runtime overheads. Integrates native CSS custom properties for instant dark/light
+                  mode toggling that also respects the visitor's operating system preferences via @media
+                  (prefers-color-scheme).
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">INTERACTIVE CAPABILITIES</h4>
+                <p class="modal-block-text">
+                  Features an 8-bit interactive terminal assistant capable of answering questions about Shreyas' skills
+                  and projects, mobile drawer navigation with complete ARIA keyboard accessibility, and CSS grid and
+                  flexbox architectures.
+                </p>
+              </div>
+
+              <div class="modal-section-block">
+                <h4 class="modal-block-heading pixel-font">TECHNOLOGY STACK</h4>
+                <div class="modal-chips-row">
+                  <span class="pixel-chip">HTML5 Semantic</span>
+                  <span class="pixel-chip">Vanilla CSS3</span>
+                  <span class="pixel-chip">JavaScript ES6+</span>
+                  <span class="pixel-chip">CSS Variables</span>
+                  <span class="pixel-chip">Media Queries</span>
+                  <span class="pixel-chip">Keyboard Accessibility</span>
+                </div>
+              </div>
+
+              <div class="modal-footer-actions">
+                <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+                  class="pixel-btn pixel-btn-primary">
+                  <span>&#128187;</span> VIEW REPOSITORY ON GITHUB
+                </a>
+                <button class="pixel-btn pixel-btn-secondary" data-modal-close>
+                  <span>&#10006;</span> DISMISS SPECS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TESTIMONIALS SECTION
+         Peer endorsements, mentor reviews, and academic recommendations
+         styled with the pixel art / glass aesthetic.
+    ======================================================== -->
+    <section class="testimonials-section section-padding" id="testimonials">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">ENDORSEMENTS</span>
+          <h2 class="section-title">Testimonials &amp; Reviews</h2>
+          <div class="title-underline"></div>
+        </header>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card pixel-hud-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar-badge pixel-font">PROF</div>
+              <div>
+                <h3 class="reviewer-name">Dr. S. K. Sharma</h3>
+                <span class="reviewer-title pixel-font-sub">Professor &amp; Systems Lab Lead</span>
+              </div>
+            </div>
+            <div class="pixel-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              "Shreyas's work on the Adaptive Headlights system demonstrated remarkable proficiency in low-level C
+              programming, sensor calibration, and real-time responsiveness. A disciplined and detail-oriented
+              engineer."
+            </p>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card pixel-hud-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar-badge pixel-font">PEER</div>
+              <div>
+                <h3 class="reviewer-name">Karthik R.</h3>
+                <span class="reviewer-title pixel-font-sub">Hackathon Teammate &amp; CS Colleague</span>
+              </div>
+            </div>
+            <div class="pixel-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              "Dependable, fast at algorithmic debugging, and great at breaking down complex requirements into clean
+              modular functions. Outstanding teammate in high-pressure project deadlines."
+            </p>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card pixel-hud-card glass-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar-badge pixel-font">DEV</div>
+              <div>
+                <h3 class="reviewer-name">Ananya P.</h3>
+                <span class="reviewer-title pixel-font-sub">Senior Developer &amp; Project Reviewer</span>
+              </div>
+            </div>
+            <div class="pixel-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              "Consistently writes clean, well-commented code with strong adherence to engineering best practices,
+              relational schema optimization, and scalable software design."
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CHAT SECTION: INTERACTIVE AI VERSION OF PORTFOLIO OWNER
+         Allows visitors to interact with an AI representation of Shreyas H N.
+         Includes:
+         - Responsive arcade chat window interface with status LEDs
+         - Message display area with timestamps and bot/user bubbles
+         - Real-time animated typing indicator
+         - Quick prompt inquiry buttons
+         - Accessible input field with submit handler
+         - Extensible architecture ready for OpenAI / Gemini API integration
+    ======================================================== -->
+    <section class="chat-section section-padding" id="chat">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag pixel-font" style="font-size: 0.7rem;">NEURAL NPC DIALOGUE</span>
+          <h2 class="section-title">Chat with AI Shreyas</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead pixel-font-sub">
+            [SYS_AI]: Interact with the artificial intelligence persona of Shreyas. Ask about core competencies,
+            engineering architectures, project decisions, or education.
+          </p>
+        </header>
+
+        <div class="terminal-chat-wrapper pixel-box">
+          <!-- Chat Window Header -->
+          <div class="terminal-chat-header">
+            <div class="chat-header-identity">
+              <div class="chat-header-avatar-wrap">
+                <img src="pixel-avatar.png" alt="AI Shreyas Avatar" class="chat-header-avatar" />
+                <span class="chat-status-led" aria-hidden="true"></span>
+              </div>
+              <div class="chat-header-info">
+                <span class="terminal-title pixel-font">SHREYAS_AI // NEURAL ENGINE V1.0</span>
+                <span class="terminal-status pixel-font-sub">SYSTEM: ONLINE &bull; READY</span>
+              </div>
+            </div>
+            <div class="terminal-controls">
+              <span class="pixel-sq red" title="Disconnect"></span>
+              <span class="pixel-sq yellow" title="Idle"></span>
+              <span class="pixel-sq green" title="Active"></span>
+            </div>
+          </div>
+
+          <!-- Message Display Area -->
+          <div class="terminal-chat-body" id="chat-messages" role="log" aria-live="polite">
+            <div class="chat-bubble bot-bubble">
+              <div class="bubble-header">
+                <span class="bubble-sender pixel-font">AI_SHREYAS:</span>
+                <span class="bubble-time pixel-font-sub">ONLINE NOW</span>
+              </div>
+              <p>Hello visitor! 👋 I'm the AI representation of Shreyas H N. Ask me anything about my software
+                engineering stack, C/Java/Python competencies, the Adaptive Headlights project, or how to get in touch!
+              </p>
+            </div>
+          </div>
+
+          <!-- Live Animated Typing Indicator -->
+          <div id="chat-typing-indicator" class="chat-typing-indicator hidden" aria-hidden="true">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-text pixel-font-sub">AI Shreyas is compiling reply...</span>
+          </div>
+
+          <!-- Quick Inquiry Prompts -->
+          <div class="chat-quick-prompts" aria-label="Suggested questions">
+            <button class="quick-prompt-btn pixel-btn" data-query="skills">
+              ⚡ Core Skills &amp; Stack
+            </button>
+            <button class="quick-prompt-btn pixel-btn" data-query="projects">
+              🚗 Headlights Project Specs
+            </button>
+            <button class="quick-prompt-btn pixel-btn" data-query="video">
+              🎬 Watch Video Highlight
+            </button>
+            <button class="quick-prompt-btn pixel-btn" data-query="education">
+              🎓 Degree &amp; College
+            </button>
+            <button class="quick-prompt-btn pixel-btn" data-query="contact">
+              ✉️ Contact &amp; Hire
+            </button>
+            <button class="quick-prompt-btn pixel-btn" data-query="api">
+              🧠 AI API Architecture
+            </button>
+          </div>
+
+          <!-- Terminal Input Bar -->
+          <form id="terminal-chat-form" class="terminal-input-bar">
+            <span class="terminal-prompt-char pixel-font" aria-hidden="true">&gt;</span>
+            <input type="text" id="terminal-chat-input" class="terminal-input pixel-font-sub"
+              placeholder="Ask AI Shreyas a question (e.g., 'What are your top projects?')..." autocomplete="off"
+              aria-label="Message input for AI Shreyas" />
+            <button type="submit" class="terminal-send-btn pixel-btn pixel-btn-primary"
+              aria-label="Send message to AI Shreyas">
+              SEND [&#9654;]
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTACT SECTION
+         Direct contact options, phone, email, location, 
+         social channels, and an interactive contact form placeholder.
+    ======================================================== -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact &amp; Connect</h2>
+          <div class="title-underline"></div>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Details -->
+          <div class="contact-info-cards">
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:shreyasg556@gmail.com">shreyasg556@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <a href="tel:+918762975007">+91 8762975007</a>
+              </div>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <span>Karnataka, India</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/shreyas-gowda-6ab006398" target="_blank"
+                  rel="noopener noreferrer">shreyas-gowda-6ab006398</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Placeholder -->
+          <!-- Contact Form Container -->
+          <div class="contact-form-container glass-card">
+            <h3>Send a Message</h3>
+            <p class="form-instruction">Feel free to reach out for project collaborations or opportunities.</p>
+
+            <div id="contact-form-feedback" class="form-feedback-box hidden" role="status"></div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="e.g. Ada Lovelace" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Your Email</label>
+                <input type="email" id="contact-email" name="email" placeholder="ada@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Your Message</label>
+                <textarea id="contact-message" name="message" rows="4"
+                  placeholder="Hi Shreyas, I'd like to discuss an opportunity..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" x2="11" y1="2" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+       Semantic <footer> containing copyright, quick navigation, 
+       and return-to-top anchor.
+  ======================================================== -->
+  <!-- ========================================================
+       FOOTER
+       Semantic <footer> containing:
+       - Pixel-art social media icon bar linking to active profiles
+       - Brand logo, tagline, and full site navigation
+       - Copyright notice and accessible Back-to-Top trigger
+  ======================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-container-enhanced">
+
+      <!-- Top Row: Pixel Art Social Media Icon Deck -->
+      <div class="footer-social-section">
+        <span class="social-deck-title pixel-font">CONNECT_NETWORKS // MULTIPLAYER_CHANNELS</span>
+        <div class="footer-social-icons" role="list" aria-label="Social media and professional profiles">
+
+          <!-- GitHub -->
+          <div role="listitem">
+            <a href="https://github.com/shreyasg556-dot" target="_blank" rel="noopener noreferrer"
+              class="pixel-social-icon-btn" aria-label="Visit Shreyas on GitHub - Code Repositories (opens in new tab)"
+              title="GitHub Profile">
+              <svg class="social-svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              <span class="social-icon-label pixel-font-sub">GITHUB</span>
+            </a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div role="listitem">
+            <a href="https://linkedin.com/in/shreyas-gowda-6ab006398" target="_blank" rel="noopener noreferrer"
+              class="pixel-social-icon-btn"
+              aria-label="Connect with Shreyas on LinkedIn - Professional Network (opens in new tab)"
+              title="LinkedIn Profile">
+              <svg class="social-svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span class="social-icon-label pixel-font-sub">LINKEDIN</span>
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div role="listitem">
+            <a href="mailto:shreyasg556@gmail.com" class="pixel-social-icon-btn"
+              aria-label="Send an Email to Shreyas H N (opens default email client)" title="Email Shreyas">
+              <svg class="social-svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <span class="social-icon-label pixel-font-sub">EMAIL</span>
+            </a>
+          </div>
+
+          <!-- Phone -->
+          <div role="listitem">
+            <a href="tel:+918762975007" class="pixel-social-icon-btn"
+              aria-label="Call Shreyas H N via phone: +91 8762975007" title="Call Shreyas">
+              <svg class="social-svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span class="social-icon-label pixel-font-sub">PHONE</span>
+            </a>
+          </div>
+
+          <!-- Resume CV -->
+          <div role="listitem">
+            <a href="Shreyas.resume.pdf" target="_blank" rel="noopener noreferrer" class="pixel-social-icon-btn"
+              aria-label="Download Shreyas's Engineering Resume CV (PDF document)" title="Resume CV">
+              <svg class="social-svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+              <span class="social-icon-label pixel-font-sub">RESUME</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="footer-divider-dashed"></div>
+
+      <!-- Bottom Row: Brand, Nav & Copyright -->
+      <div class="footer-bottom-grid">
+        <div class="footer-left">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-bracket">&lt;</span>Shreyas<span class="logo-accent">.dev</span><span
+              class="logo-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">Building clean, efficient software solutions with passion.</p>
+        </div>
+
+        <div class="footer-center">
+          <ul class="footer-nav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#highlight">Highlight</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#chat">Chat</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <p class="copyright-text">&copy; 2026 Shreyas H N. All rights reserved.</p>
+          <a href="#hero" class="back-to-top pixel-box" aria-label="Back to top of page">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m18 15-6-6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Theme Toggle, Navigation, & Interactions -->
+  <script src="script.js"></script>
+</body>
+
+</html>
